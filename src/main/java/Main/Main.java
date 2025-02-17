@@ -56,10 +56,10 @@ public class Main {
         else if(isWithinRangeLongitude(longitude, -71.09157048916403, -71.08283834424013)){
             return "Hynes";
         }
-        else if(isWithinRangeLongitude(longitude, -71.08283834424013, 71.07428387483759)){ 
+        else if(isWithinRangeLongitude(longitude, -71.08283834424013, -71.07428387483759)){ 
             return "Copely";
         }
-        else if(isWithinRangeLongitude(longitude, 71.07428387483759, -71.06756822617031)){
+        else if(isWithinRangeLongitude(longitude, -71.07428387483759, -71.06756822617031)){
             return "Arlington";
         }
         else if(isWithinRangeLongitude(longitude, -71.06756822617031, -71.06331594392393)){
