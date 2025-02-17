@@ -15,62 +15,67 @@ public class Main {
         printLineLocations();
     }
 
-    public static boolean isWithinRangeLatitude(double value, double min, double max) {
-        return value >= min && value <= max;
-    }
-
-    public static boolean isWithinRangeLongitude(double value, double max, double min) {
+    public static boolean isWithinRangeLongitude(double value, double min, double max) {
         return value >= min && value <= max;
     }
     
     public static String locationToStation(double latitude, double longitude){ //-71.135604
-        if(isWithinRangeLatitude(latitude, 42.346070, 42.348812) && isWithinRangeLongitude(longitude, -71.141312, -71.138946)){ // new range
+        if(isWithinRangeLongitude(longitude, -71.14103911295325, -71.1391021606729)){ // new range
             return "Warren";
         }
-        else if(isWithinRangeLatitude(latitude, 42.348812, 42.348271) && isWithinRangeLongitude(longitude, -71.1362035, -71.138946)){ // new range
+        else if(isWithinRangeLongitude(longitude, -71.1391021606729, -71.13591507424903)){ // new range
             return "Allston";
         }
-        else if(isWithinRangeLatitude(latitude, 42.349498, 42.3509465) && isWithinRangeLongitude(longitude, -71.1329905, -71.1284615)){
+        else if(isWithinRangeLongitude(longitude, -71.13591507424903, -71.13281401970175)){ // new range
             return "Griggs";
         }
-        else if(isWithinRangeLatitude(latitude, 42.3509465, 42.3516735) && isWithinRangeLongitude(longitude, -71.1284615, -71.1226255)){
+        else if(isWithinRangeLongitude(longitude, -71.13281401970175, -71.12800849093668)){ // new range
+            return "Harvard Ave";
+        }
+        else if(isWithinRangeLongitude(longitude, -71.12800849093668, -71.12258154210207)){ // new range
             return "Packards";
         }
-        else if(isWithinRangeLatitude(latitude, 42.3516735, 42.351301) && isWithinRangeLongitude(longitude, -71.1226255, -71.117346)){
+        else if(isWithinRangeLongitude(longitude, -71.12258154210207, -71.11735404770603)){ // new range
             return "Babcock";
         }
-        else if(isWithinRangeLatitude(latitude, 42.351301, 42.3505315) && isWithinRangeLongitude(longitude, -71.117346, -71.1109485)){
+        else if(isWithinRangeLongitude(longitude, -71.11735404770603, -71.1103529839365)){ // new range
             return "Amory";
         }
-        else if(isWithinRangeLatitude(latitude, 42.3505315, 42.349903) && isWithinRangeLongitude(longitude, -71.1109485, -71.105716)){
+        else if(isWithinRangeLongitude(longitude, -71.1103529839365, -71.10583693586047)){ // new range
             return "BU Central";
         }
-        else if(isWithinRangeLatitude(latitude, 42.349903, 42.349474) && isWithinRangeLongitude(longitude, -71.105716, -71.1021555)){
+        else if(isWithinRangeLongitude(longitude, -71.10583693586047, -71.10220543356607)){ // new range
             return "BU East";
         }
-        else if(isWithinRangeLatitude(latitude, 42.349474, 42.3490315) && isWithinRangeLongitude(longitude, -71.1021555, -71.097809)){
+        else if(isWithinRangeLongitude(longitude, -71.10220543356607, -71.09755123833298)){ // new range
             return "Blandford";
         }
-        else if(isWithinRangeLatitude(latitude, 42.3490315, 42.3483945) && isWithinRangeLongitude(longitude, -71.097809, -71.091759)){
+        else if(isWithinRangeLongitude(longitude, -71.09755123833298, -71.09157048916403)){ // new range
             return "Kenmore";
         }
-        else if(isWithinRangeLatitude(latitude, 42.3483945, 42.3489655) && isWithinRangeLongitude(longitude, -71.091759, -71.082818)){
+        else if(isWithinRangeLongitude(longitude, -71.09157048916403, -71.08283834424013)){ // new range
             return "Hynes";
         }
-        else if(isWithinRangeLatitude(latitude, 42.3489655, 42.350856) && isWithinRangeLongitude(longitude, -71.082818, -71.074502)){
+        else if(isWithinRangeLongitude(longitude, -71.08283834424013, 71.07428387483759)){ // new range
             return "Copely";
         }
-        else if(isWithinRangeLatitude(latitude, 42.350856, 42.3524105) && isWithinRangeLongitude(longitude, -71.074502, -71.067907)){ // Working
+        else if(isWithinRangeLongitude(longitude, 71.07428387483759, -71.06756822617031)){ // Working
             return "Arlington";
         }
-        else if(isWithinRangeLatitude(latitude, 42.3524105, 42.3547195) && isWithinRangeLongitude(longitude, -71.067907, -71.063467)){
+        else if(isWithinRangeLongitude(longitude, -71.06756822617031, -71.06331594392393)){ // new range
             return "Boylston";
         }
-        else if(isWithinRangeLatitude(latitude, 42.3547195, 42.3580025) && isWithinRangeLongitude(longitude, -71.063467, -71.060829)){ // Working
+        else if(isWithinRangeLongitude(longitude, -71.06331594392393, -71.06041496108917)){ // new range
             return "Park";
         }
-        else if(isWithinRangeLatitude(latitude, 42.3580025, 42.359661) && isWithinRangeLongitude(longitude, -71.060829, -71.059258)){ // Working
+        else if(isWithinRangeLongitude(longitude, -71.06041496108917, -71.05825188655594)){ // new range
             return "Gov";
+        }
+        else if(longitude < -71.14103911295325){
+            return "Past Warren";
+        }
+        else if(longitude > -71.05825188655594){
+            return "Past Gov";
         }
         else if(latitude == 42.341 && longitude == -71.16742){
             return "Not in use";
